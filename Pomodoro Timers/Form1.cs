@@ -13,17 +13,37 @@ namespace Pomodoro_Timers
     public partial class pomoForm : Form
     {
         decimal pomoTime, breakTime, timeElapsed;
-        bool isPomo = true;
+        bool isPomo = true, isStart = true, hasStarted = false;
 
         private void startBt_Click(object sender, EventArgs e)
         {
-            if (pomoTimer.Enabled) return;
-            pomoTime = pomoVal.Value * 60; breakTime = breakVal.Value * 60;
-            timeElapsed = 0;
+            if (isStart)
+            {
+                if (hasStarted)
+                {
+                    pomoTimer.Start();
 
-            pomoTimer.Start();
+                    ((Button)sender).Text = "Stop";
+                    isStart = !isStart;
 
-            ((Button)sender).Enabled = false;
+                    return;
+                }
+                pomoTime = pomoVal.Value * 60; breakTime = breakVal.Value * 60;
+                timeElapsed = 0;
+
+                pomoTimer.Start();
+
+                ((Button)sender).Text = "Stop";
+                isStart = !isStart;
+                hasStarted = true;
+            }
+            else
+            {
+                pomoTimer.Stop();
+
+                ((Button)sender).Text = "Start";
+                isStart = !isStart;
+            }
         }
 
         private void pomoTimer_Tick(object sender, EventArgs e)
