@@ -203,6 +203,8 @@
             // 
             // resetBt
             // 
+            this.resetBt.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.resetBt.Location = new System.Drawing.Point(145, 224);
             this.resetBt.Name = "resetBt";
             this.resetBt.Size = new System.Drawing.Size(127, 34);
