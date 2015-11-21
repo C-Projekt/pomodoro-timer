@@ -64,6 +64,12 @@ namespace Pomodoro_Timers
             progBar.Value = (int)(timeElapsed / (isPomo ? pomoTime : breakTime) * 100);
         }
 
+        private void resetBt_Click(object sender, EventArgs e)
+        {
+            timeElapsed = 0;
+            progBar.Value = 0;
+        }
+
         private void pomoVal_ValueChanged(object sender, EventArgs e)
         {
             pomoTime = ((NumericUpDown)sender).Value * 60;

@@ -33,18 +33,19 @@
             this.pomoTimer = new System.Windows.Forms.Timer(this.components);
             this.progBar = new System.Windows.Forms.ProgressBar();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.pomoVal = new System.Windows.Forms.NumericUpDown();
+            this.label2 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.breakVal = new System.Windows.Forms.NumericUpDown();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.startBt = new System.Windows.Forms.Button();
+            this.resetBt = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pomoVal)).BeginInit();
+            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.breakVal)).BeginInit();
             this.SuspendLayout();
             // 
@@ -78,39 +79,6 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(259, 174);
             this.tableLayoutPanel1.TabIndex = 1;
             // 
-            // label1
-            // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label1.Location = new System.Drawing.Point(5, 10);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(113, 26);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "POMODORO";
-            // 
-            // label2
-            // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label2.Location = new System.Drawing.Point(-4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(122, 25);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "POMODORO";
-            // 
-            // label3
-            // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label3.Location = new System.Drawing.Point(3, 2);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(124, 18);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "BREAK";
-            // 
             // panel1
             // 
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -120,20 +88,8 @@
             this.panel1.Controls.Add(this.label2);
             this.panel1.Location = new System.Drawing.Point(3, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(118, 203);
+            this.panel1.Size = new System.Drawing.Size(123, 168);
             this.panel1.TabIndex = 0;
-            // 
-            // panel2
-            // 
-            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel2.Controls.Add(this.breakVal);
-            this.panel2.Controls.Add(this.label3);
-            this.panel2.Location = new System.Drawing.Point(129, 1);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(130, 205);
-            this.panel2.TabIndex = 1;
             // 
             // pomoVal
             // 
@@ -152,7 +108,7 @@
             0,
             0});
             this.pomoVal.Name = "pomoVal";
-            this.pomoVal.Size = new System.Drawing.Size(111, 20);
+            this.pomoVal.Size = new System.Drawing.Size(116, 20);
             this.pomoVal.TabIndex = 1;
             this.pomoVal.Value = new decimal(new int[] {
             25,
@@ -160,6 +116,29 @@
             0,
             0});
             this.pomoVal.ValueChanged += new System.EventHandler(this.pomoVal_ValueChanged);
+            // 
+            // label2
+            // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label2.Location = new System.Drawing.Point(-4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(127, 25);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "POMODORO";
+            // 
+            // panel2
+            // 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel2.Controls.Add(this.breakVal);
+            this.panel2.Controls.Add(this.label3);
+            this.panel2.Location = new System.Drawing.Point(132, 3);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(124, 168);
+            this.panel2.TabIndex = 1;
             // 
             // breakVal
             // 
@@ -178,7 +157,7 @@
             0,
             0});
             this.breakVal.Name = "breakVal";
-            this.breakVal.Size = new System.Drawing.Size(120, 20);
+            this.breakVal.Size = new System.Drawing.Size(114, 20);
             this.breakVal.TabIndex = 2;
             this.breakVal.Value = new decimal(new int[] {
             5,
@@ -187,6 +166,28 @@
             0});
             this.breakVal.ValueChanged += new System.EventHandler(this.numericUpDown2_ValueChanged);
             // 
+            // label3
+            // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label3.Location = new System.Drawing.Point(3, 2);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(118, 18);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "BREAK";
+            // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label1.Location = new System.Drawing.Point(5, 10);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(113, 26);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "POMODORO";
+            // 
             // startBt
             // 
             this.startBt.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -194,17 +195,28 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.startBt.Location = new System.Drawing.Point(13, 224);
             this.startBt.Name = "startBt";
-            this.startBt.Size = new System.Drawing.Size(259, 34);
+            this.startBt.Size = new System.Drawing.Size(126, 34);
             this.startBt.TabIndex = 2;
             this.startBt.Text = "Start";
             this.startBt.UseVisualStyleBackColor = true;
             this.startBt.Click += new System.EventHandler(this.startBt_Click);
+            // 
+            // resetBt
+            // 
+            this.resetBt.Location = new System.Drawing.Point(145, 224);
+            this.resetBt.Name = "resetBt";
+            this.resetBt.Size = new System.Drawing.Size(127, 34);
+            this.resetBt.TabIndex = 3;
+            this.resetBt.Text = "Reset";
+            this.resetBt.UseVisualStyleBackColor = true;
+            this.resetBt.Click += new System.EventHandler(this.resetBt_Click);
             // 
             // pomoForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 261);
+            this.Controls.Add(this.resetBt);
             this.Controls.Add(this.startBt);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.progBar);
@@ -214,8 +226,8 @@
             this.Load += new System.EventHandler(this.pomoForm_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pomoVal)).EndInit();
+            this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.breakVal)).EndInit();
             this.ResumeLayout(false);
 
@@ -234,6 +246,7 @@
         private System.Windows.Forms.NumericUpDown pomoVal;
         private System.Windows.Forms.NumericUpDown breakVal;
         private System.Windows.Forms.Button startBt;
+        private System.Windows.Forms.Button resetBt;
     }
 }
 
