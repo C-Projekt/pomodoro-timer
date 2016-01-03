@@ -70,6 +70,13 @@ namespace Pomodoro_Timers
             progBar.Value = 0;
         }
 
+        private void progBar_Click(object sender, EventArgs e)
+        {
+            TimeSpan ts = new TimeSpan(0, 0, (int)timeElapsed);
+            string fmt = string.Format("{0:00}:{1:00}:{2:00}", ts.Hours, ts.Minutes, ts.Seconds);
+            MessageBox.Show(fmt, "Time Elapsed");
+        }
+
         private void pomoVal_ValueChanged(object sender, EventArgs e)
         {
             pomoTime = ((NumericUpDown)sender).Value * 60;

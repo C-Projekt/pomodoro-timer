@@ -59,8 +59,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.progBar.Location = new System.Drawing.Point(13, 13);
             this.progBar.Name = "progBar";
-            this.progBar.Size = new System.Drawing.Size(259, 23);
+            this.progBar.Size = new System.Drawing.Size(235, 23);
             this.progBar.TabIndex = 0;
+            this.progBar.Click += new System.EventHandler(this.progBar_Click);
             // 
             // tableLayoutPanel1
             // 
@@ -76,7 +77,7 @@
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(259, 174);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(235, 92);
             this.tableLayoutPanel1.TabIndex = 1;
             // 
             // panel1
@@ -85,10 +86,11 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.Controls.Add(this.pomoVal);
+            this.panel1.Controls.Add(this.startBt);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Location = new System.Drawing.Point(3, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(123, 168);
+            this.panel1.Size = new System.Drawing.Size(111, 86);
             this.panel1.TabIndex = 0;
             // 
             // pomoVal
@@ -108,7 +110,7 @@
             0,
             0});
             this.pomoVal.Name = "pomoVal";
-            this.pomoVal.Size = new System.Drawing.Size(116, 20);
+            this.pomoVal.Size = new System.Drawing.Size(104, 20);
             this.pomoVal.TabIndex = 1;
             this.pomoVal.Value = new decimal(new int[] {
             25,
@@ -124,7 +126,7 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.label2.Location = new System.Drawing.Point(-4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(127, 25);
+            this.label2.Size = new System.Drawing.Size(115, 25);
             this.label2.TabIndex = 0;
             this.label2.Text = "POMODORO";
             // 
@@ -133,11 +135,12 @@
             this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel2.Controls.Add(this.resetBt);
             this.panel2.Controls.Add(this.breakVal);
             this.panel2.Controls.Add(this.label3);
-            this.panel2.Location = new System.Drawing.Point(132, 3);
+            this.panel2.Location = new System.Drawing.Point(120, 3);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(124, 168);
+            this.panel2.Size = new System.Drawing.Size(112, 86);
             this.panel2.TabIndex = 1;
             // 
             // breakVal
@@ -157,7 +160,7 @@
             0,
             0});
             this.breakVal.Name = "breakVal";
-            this.breakVal.Size = new System.Drawing.Size(114, 20);
+            this.breakVal.Size = new System.Drawing.Size(102, 20);
             this.breakVal.TabIndex = 2;
             this.breakVal.Value = new decimal(new int[] {
             5,
@@ -173,7 +176,7 @@
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.label3.Location = new System.Drawing.Point(3, 2);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(118, 18);
+            this.label3.Size = new System.Drawing.Size(106, 18);
             this.label3.TabIndex = 1;
             this.label3.Text = "BREAK";
             // 
@@ -190,12 +193,11 @@
             // 
             // startBt
             // 
-            this.startBt.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.startBt.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.startBt.Location = new System.Drawing.Point(13, 224);
+            this.startBt.Location = new System.Drawing.Point(0, 49);
             this.startBt.Name = "startBt";
-            this.startBt.Size = new System.Drawing.Size(126, 34);
+            this.startBt.Size = new System.Drawing.Size(111, 37);
             this.startBt.TabIndex = 2;
             this.startBt.Text = "Start";
             this.startBt.UseVisualStyleBackColor = true;
@@ -203,11 +205,11 @@
             // 
             // resetBt
             // 
-            this.resetBt.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.resetBt.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.resetBt.Location = new System.Drawing.Point(145, 224);
+            this.resetBt.Location = new System.Drawing.Point(0, 49);
             this.resetBt.Name = "resetBt";
-            this.resetBt.Size = new System.Drawing.Size(127, 34);
+            this.resetBt.Size = new System.Drawing.Size(106, 37);
             this.resetBt.TabIndex = 3;
             this.resetBt.Text = "Reset";
             this.resetBt.UseVisualStyleBackColor = true;
@@ -217,9 +219,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 261);
-            this.Controls.Add(this.resetBt);
-            this.Controls.Add(this.startBt);
+            this.ClientSize = new System.Drawing.Size(260, 147);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.progBar);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
